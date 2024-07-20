@@ -1,0 +1,20 @@
+<div class="container mx-auto px-4 md:py-16 py-6">
+  <div class="text-center">
+    <h1 class="text-4xl font-semibold font-heading text-zinc-900 dark:text-zinc-100 tracking-tight">Welcome to Buscatex</h1>
+    <p class="font-light text-base text-zinc-700 tracking-normal mt-3 dark:text-zinc-300">Explore our products and partners.</p>
+
+    <div class="mt-8 flex justify-center">
+      <%= link_to products_index_path, class: "btn-image mx-2 relative" do %>
+        <div class="border border-zinc-300/90 shadow-sm shadow-zinc-300/20 rounded-lg p-3 dark:shadow-zinc-950/50 dark:bg-zinc-800/90 dark:border-zinc-600/80 dark:focus:ring-zinc-600/30 dark:focus:border-zinc-600">
+          <%= image_tag "home/shop_cart.jpeg", class: "rounded h-[174px] w-full object-cover object-center dark:border dark:border-zinc-600/80 border-transparent", alt: "Products Image" %>
+        </div>
+      <% end %>
+
+      <%= link_to partners_index_path, class: "btn-image mx-2 relative" do %>
+        <div class="border border-zinc-300/90 shadow-sm shadow-zinc-300/20 rounded-lg p-3 dark:shadow-zinc-950/50 dark:bg-zinc-800/90 dark:border-zinc-600/80 dark:focus:ring-zinc-600/30 dark:focus:border-zinc-600">
+          <%= image_tag "home/store.jpeg", class: "rounded h-[174px] w-full object-cover object-center dark:border dark:border-zinc-600/80 border-transparent", alt: "Partners Image" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

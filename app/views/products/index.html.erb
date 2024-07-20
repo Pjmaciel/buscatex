@@ -1,0 +1,21 @@
+<!-- app/views/products/index.html.erb -->
+<div class="container mx-auto px-4 md:py-16 py-6">
+  <div class="text-center">
+    <h1 class="text-4xl font-semibold font-heading text-zinc-900 dark:text-zinc-100 tracking-tight">Products</h1>
+    <p class="font-light text-base text-zinc-700 tracking-normal mt-3 dark:text-zinc-300">Explore our range of products.</p>
+
+    <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+      <% if @products.any? %>
+        <% @products.each do |product| %>
+          <div class="border border-zinc-300/90 shadow-sm shadow-zinc-300/20 rounded-lg p-3 dark:shadow-zinc-950/50 dark:bg-zinc-800/90 dark:border-zinc-600/80 dark:focus:ring-zinc-600/30 dark:focus:border-zinc-600 relative">
+            <%= image_tag product['photo'], class: "rounded h-[174px] w-full object-cover object-center dark:border dark:border-zinc-600/80 border-transparent", alt: product['name'] %>
+            <span class="badge absolute top-2 left-2 rounded bg-white text-slate-800 border border-slate-200 font-medium px-2 py-1 leading-tight text-xs dark:border-none dark:bg-white/10 dark:text-white/80"><%= product['name'] %></span>
+            <span class="absolute bottom-2 right-2 text-white font-semibold"><%= product['is_promotion'] ? (product['price'] * 0.8).round(2) : product['price'] %> USD</span>
+          </div>
+        <% end %>
+      <% else %>
+        <p class="text-zinc-700 dark:text-zinc-300">No products found.</p>
+      <% end %>
+    </div>
+  </div>
+</div>
