@@ -1,8 +1,11 @@
-# app/controllers/partners_controller.rb
 class PartnersController < ApplicationController
   def index
-    @shop_info = ShopApi.get_shop_info
-    Rails.logger.debug("Shop Info API Response: #{@shop_info.inspect}")
-    @shop_info = {} unless @shop_info.is_a?(Hash)
+    response = ShopApi.get_shop_info
+    @partners = [response]
+  end
+
+  def show
+    response = ShopApi.get_shop_info
+    @partner = response
   end
 end

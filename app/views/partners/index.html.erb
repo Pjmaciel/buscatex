@@ -1,19 +1,13 @@
 <!-- app/views/partners/index.html.erb -->
 <div class="container mx-auto px-4 md:py-16 py-6">
   <div class="text-center">
-    <h1 class="text-4xl font-semibold font-heading text-zinc-900 dark:text-zinc-100 tracking-tight">Shop Information</h1>
-    <p class="font-light text-base text-zinc-700 tracking-normal mt-3 dark:text-zinc-300">Learn more about our shop.</p>
+    <h1 class="text-4xl font-semibold font-heading text-zinc-900 dark:text-zinc-100 tracking-tight">Partners</h1>
+    <p class="font-light text-base text-zinc-700 tracking-normal mt-3 dark:text-zinc-300">Explore our partners.</p>
+  </div>
 
-    <div class="mt-8">
-      <% if @shop_info.present? %>
-        <div class="border border-zinc-300/90 shadow-sm shadow-zinc-300/20 rounded-lg p-3 dark:shadow-zinc-950/50 dark:bg-zinc-800/90 dark:border-zinc-600/80 dark:focus:ring-zinc-600/30 dark:focus:border-zinc-600">
-          <h2 class="text-2xl font-semibold text-zinc-900 dark:text-zinc-100"><%= @shop_info['name'] %></h2>
-          <p class="text-zinc-700 dark:text-zinc-300">Color: <span style="color:<%= @shop_info['color'] %>"><%= @shop_info['color'] %></span></p>
-          <p class="text-zinc-700 dark:text-zinc-300">Owner: <%= @shop_info['owner'] %></p>
-          <p class="text-zinc-700 dark:text-zinc-300">Department: <%= @shop_info['department'] %></p>
-        </div>
-      <% else %>
-        <p class="text-zinc-700 dark:text-zinc-300">No shop information found.</p>
+    <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+      <% @partners.each do |partner| %>
+        <%= render 'partner', partner: partner %>
       <% end %>
     </div>
   </div>
