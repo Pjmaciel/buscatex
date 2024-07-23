@@ -1,0 +1,16 @@
+<!-- app/views/products/_product.html.erb -->
+<div class="border border-zinc-300/90 shadow-sm shadow-zinc-300/20 rounded-lg p-3 dark:shadow-zinc-950/50 dark:bg-zinc-800/90 dark:border-zinc-600/80 dark:focus:ring-zinc-600/30 dark:focus:border-zinc-600 relative w-64 mx-auto flex flex-col items-center" style="width: 250px;">
+  <%= image_tag product['photo'], class: "rounded h-[250px] w-[250px] object-cover object-center dark:border dark:border-zinc-600/80 border-transparent mb-4", alt: product['name'] %>
+  <h3 class="text-lg font-semibold text-zinc-900 dark:text-zinc-100 mb-2 text-center"><%= product['name'] %></h3>
+  <p class="text-sm text-zinc-700 dark:text-zinc-300 mb-4 text-center">
+    <% if product['is_promotion'] %>
+      <span class="line-through mr-2"><%= tag.p tag.s number_to_currency(product['price']) %></span>
+      <span class="ml-2 text-red-600"><%= number_to_currency(product['price'] * 0.8) %></span>
+    <% else %>
+      <%= number_to_currency(product['price']) %>
+    <% end %>
+  </p>
+  <% if product['is_promotion'] %>
+    <span class="absolute top-2 left-2 bg-red-500 text-white px-2 py-1 text-xs font-semibold rounded">Promotion</span>
+  <% end %>
+</div>

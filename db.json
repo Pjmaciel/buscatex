@@ -1,0 +1,20 @@
+{
+  "products": [
+    { "name": "Perfume IE6", "price": 10.0, "photo": "https://wl-incrivel.cf.tsp.li/resize/728x/webp/ee2/058/d903905babb7c66ea050f2ab20.jpg.webp", "is_promotion": true },
+    { "name": "Havaianas de teclado", "price": 20.0, "photo": "https://wl-incrivel.cf.tsp.li/resize/728x/webp/e01/9a7/28d74854d787ba43a0373823d3.jpg.webp", "is_promotion": false },
+    { "name": "Pano da Soneca", "price": 100.0, "photo": "https://wl-incrivel.cf.tsp.li/resize/728x/webp/7a4/305/8ef8515824b13f44e8c55dbd76.png.webp", "is_promotion": true },
+    { "name": "Baralho para Hamsters", "price": 200.0, "photo": "https://curtamais.com.br/uploads/midias/001c9f3023778f4725aebabffce0b782.png", "is_promotion": true },
+    { "name": "Notebook Core I9 DDR5 RTX 4090", "price": 40.0, "photo": "https://a-static.mlcdn.com.br/470x352/desktop-da-xuxa-design-x-75-atividades-candide-3107/magazineluiza/201892000/9ef3e8f08b66d553227d173e3cdadf9e.jpg", "is_promotion": false },
+    { "name": "Iphone", "price": 90.0, "photo": "https://d1o6h00a1h5k7q.cloudfront.net/imagens/img_m/5993/2508252.jpg", "is_promotion": true },
+    { "name": "Dog Shoes", "price": 25.0, "photo": "https://s2.glbimg.com/wBY3WUzOZeZQFKmx7z_hVYmwb-Q=/e.glbimg.com/og/ed/f/original/2022/05/24/captura_de_tela_2022-05-24_as_13.20.38.png", "is_promotion": false },
+    { "name": "Roupa moda Galinha", "price": 300.0, "photo": "https://www.guairanews.com/wp-content/uploads/2021/04/moda-looks-galos-galinhas-23012019172800402.jpeg", "is_promotion": true },
+    { "name": "Mascara UV", "price": 15.0, "photo": "https://catracalivre.com.br/wp-content/uploads/sites/5/2014/07/1123.jpg", "is_promotion": false }
+  ],
+  "info": {
+    "name": "Shop Name",
+    "color": "#FF5733",
+    "owner": "Owner Name",
+    "department": "Department Name"
+  }
+}
+
