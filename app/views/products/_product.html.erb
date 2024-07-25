@@ -4,13 +4,19 @@
   <h3 class="text-lg font-semibold text-zinc-900 dark:text-zinc-100 mb-2 text-center"><%= product['name'] %></h3>
   <p class="text-sm text-zinc-700 dark:text-zinc-300 mb-4 text-center">
     <% if product['is_promotion'] %>
-      <span class="line-through mr-2"><%= tag.p tag.s number_to_currency(product['price']) %></span>
-      <span class="ml-2 text-red-600"><%= number_to_currency(product['price'] * 0.8) %></span>
+      <span class="line-through"><%= tag.p tag.s number_to_currency(product['price']) %></span>
+      <span class="text-red-600"><%= number_to_currency(product['price'].to_f * 0.8) %></span>
     <% else %>
       <%= number_to_currency(product['price']) %>
     <% end %>
   </p>
   <% if product['is_promotion'] %>
     <span class="absolute top-2 left-2 bg-red-500 text-white px-2 py-1 text-xs font-semibold rounded">Promotion</span>
+  <% end %>
+  <p class="text-sm text-zinc-700 dark:text-zinc-300 mb-2 text-center"><strong>Category:</strong> <%= product['category']['type'] %></p>
+  <% if product['category']['type'] == 'TI' %>
+    <p class="text-sm text-zinc-700 dark:text-zinc-300 mb-2 text-center"><strong>S.O:</strong> <%= product['category']['subcategory'] %></p>
+  <% elsif product['category']['type'] == 'Eletrodomestico' %>
+    <p class="text-sm text-zinc-700 dark:text-zinc-300 mb-2 text-center"><strong>Volt:</strong> <%= product['category']['subcategory'] %></p>
   <% end %>
 </div>
